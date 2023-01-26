@@ -1,0 +1,38 @@
+/* .row{
+    width: 100%;
+} */
+.footer{
+    background-color: black;
+    width: 100%;
+}
+a{
+    color: blue;
+    text-decoration: none;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+   
+}
+
+.button{
+    margin: 20px;
+    display: flex;
+    justify-content:space-between;
+}
+
+@media screen and (max-width:500px){
+    .footer{
+        background-color: black;
+        width: 100%;
+    }
+    .footer a {
+        color: blue;
+        text-decoration: none;
+        font-size: 11px;
+        font-style: italic;
+        font-weight: 400;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+}
