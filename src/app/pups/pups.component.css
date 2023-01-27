@@ -1,0 +1,53 @@
+.row{
+    background-color: black;
+  
+}
+
+img{
+   height: 20rem;
+}
+.col-md-4{
+    padding-left: 2%;
+}
+hr{
+    height: 2px;
+    color: white;
+
+}
+.breeding{
+    background-color: black;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+}
+h5{
+    color: yellow;
+    font-size: 18px;
+}
+
+@media screen and (max-width:500px){
+    h5 {
+        font-size: 12px;
+        color: yellow;
+    }
+    .col-md-4{
+        padding-left: 3%;
+    }
+    .breeding {
+        background-color: black;
+        margin-bottom: 10px;
+        margin-left: 4px;
+    }
+   
+
+p{
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+}
+}

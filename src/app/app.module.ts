@@ -7,6 +7,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { StudsComponent } from './studs/studs.component';
+import { FemalesComponent } from './females/females.component';
+import { PupsComponent } from './pups/pups.component';
+import { HistoricallyprovenstudsComponent } from './historicallyprovenstuds/historicallyprovenstuds.component';
+import { HistoricallyprovenfemalesComponent } from './historicallyprovenfemales/historicallyprovenfemales.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,12 @@ import { StudsComponent } from './studs/studs.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    StudsComponent
+    StudsComponent,
+    FemalesComponent,
+    PupsComponent,
+    HistoricallyprovenstudsComponent,
+    HistoricallyprovenfemalesComponent,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,
