@@ -13,7 +13,7 @@
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form [formGroup]="contactForm" id="contact-form" name="contact-form" action="" method="">
 
                 <!--Grid row-->
                 <div class="row">
@@ -21,7 +21,7 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
+                            <input type="text" id="name" name="name" class="form-control" formControlName="name">
                             <label for="name" class="inputData">Your name</label>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
+                            <input type="text" id="email" name="email" class="form-control" formControlName="email">
                             <label for="email" class="inputData">Your email</label>
                         </div>
                     </div>
@@ -38,12 +38,23 @@
 
                 </div>
                 <!--Grid row-->
+                
+                 <!--Grid row-->
+                 <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="phonenumber" name="phonenumber" class="form-control" formControlName="phonenumber">
+                            <label for="phonenumber" class="inputData">Phone number</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
 
                 <!--Grid row-->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
+                            <input type="text" id="subject" name="subject" class="form-control" formControlName="subject">
                             <label for="subject" class="inputData">Subject</label>
                         </div>
                     </div>
@@ -57,7 +68,7 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" formControlName="message"></textarea>
                             <label for="message" class="inputData">Your message</label>
                         </div>
 
@@ -68,7 +79,8 @@
             </form>
 
             <div class="text-center text-md-left button">
-                <a class="btn btn-primary " onclick="document.getElementById('contact-form').submit();">Send</a>
+                <button class="btn btn-primary " [disabled]="contactForm.invalid" (click)="submitData(contactForm.value)">Send</button>
+                <p *ngIf="isSubmit">{{submitMessage}}</p>
             </div>
             <div class="status"></div>
         </div>

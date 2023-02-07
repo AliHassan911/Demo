@@ -1,6 +1,27 @@
 /* .row{
     width: 100%;
 } */
+
+.menu-container{
+    position:relative;
+}
+.menu{
+    position:absolute;
+    z-index:1;
+    background: black;
+    display:none;
+}
+.menu-container:hover .menu{
+    display:block;
+}
+.menu a{
+    width:100%;
+    min-width:8rem;
+}
+.dropdowmimg{
+    width: 20px;
+    height: 20px;
+}
 .head {
     display: inline-block;
     justify-content:center;
@@ -94,6 +115,9 @@
         font-style: italic;
         font-weight: 400;
     }
-   
+    .dropdowmimg{
+        width: 15px;
+        height: 15px;
+    }
 
 }
